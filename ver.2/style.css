@@ -1,0 +1,143 @@
+@-webkit-keyframes pulse-border {0% { transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}100% {transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0;}}
+@keyframes pulse-border { 0% { transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}100% {transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);opacity: 0;}}
+@-webkit-keyframes rotate { 0%{transform: scale(1);}25%{transform: scale(1.3);}50%{transform: scale(1);}75%{transform: scale(1.3);}100%{transform: scale(1);}}
+@keyframes rotate { 0%{transform: scale(1);}25%{transform: scale(1.3);}50%{transform: scale(1);}75%{transform: scale(1.3);}100%{transform: scale(1);}}
+
+.bidrich_branding_play_wrap img{width: 100%;}
+.bidrich_branding_play{width: calc(100%-30px);max-width: 800px; position: relative;height:100px;  box-shadow: 8px 6px 10px 1px rgba(0, 0, 0, .3);border-radius: 14px; isolation: isolate;z-index: 0; overflow: hidden;transition: all 0.3s ease;box-sizing:border-box;margin: auto 15px;}
+.bidrich_branding_play .play-box-video{position: relative;}
+.bidrich_branding_play .play-box-video video{display: block; width: 100% !important;}
+.bidrich_branding_play .play-box-img{width: 80%; height: 100%;  box-shadow: 12px 1px 20px 1px rgba(0, 0, 0, .5);overflow: hidden;border-top-right-radius: 20px; border-bottom-right-radius:20px;background: url('01.png') center no-repeat;background-size: cover;position: absolute;top: 0;left: 0;transition: all 0.3s ease-in;}
+.bidrichblock{display: block !important;}
+
+/* spaeker */
+.bidrich_branding_play svg#volume path{fill:#ececec;stroke:#ececec;stroke-width:1em;}
+.bidrich_branding_play svg#volume path.speaker{fill:#ececec;stroke:#ececec;stroke-width:5em}
+.bidrich_branding_play svg#volume{ display:none; width: 20px;position: absolute;z-index: 2;top: 10px; left: 10px;}
+.mute{opacity:1}
+.wave{transform: matrix(0, 0, 0, 0, 22, 32); transform-origin:-100% 50%;opacity:0;}
+/* spaeker on */
+.bidrich_branding_play svg#volume.on .mute{animation: turnOn .5s ease-out; animation-iteration-count:1; animation-direction: reverse; animation-fill-mode: forwards;}
+.bidrich_branding_play svg#volume.on .wave.sm{animation: turnOn .5s ease-out;animation-iteration-count:1; animation-fill-mode: forwards; animation-delay:.025s;}
+.bidrich_branding_play svg#volume.on .wave.md{animation: turnOn .5s ease-out; animation-iteration-count:1; animation-fill-mode: forwards; animation-delay:.05s;}
+.bidrich_branding_play svg#volume.on .wave.lg{animation: turnOn .5s ease-out;animation-iteration-count:1;animation-fill-mode: forwards;animation-delay:.1s;}
+/* spaeker off */
+.bidrich_branding_play svg#volume.off .mute{animation: turnOff .3s ease-out; animation-iteration-count:1;animation-fill-mode: forwards;animation-direction: reverse;}
+.bidrich_branding_play svg#volume.off .wave.sm{animation: turnOff .3s ease-in;animation-iteration-count:1;animation-fill-mode: forwards;}
+.bidrich_branding_play svg#volume.off .wave.md{animation: turnOff .3s ease-in; animation-iteration-count:1; animation-fill-mode: forwards;}
+.bidrich_branding_play svg#volume.off .wave.lg{animation: turnOff .3s ease-in; animation-iteration-count:1; animation-fill-mode: forwards;}
+
+@-webkit-keyframes turnOn {
+  0% {transform: matrix(0, 0, 0, 0, 22, 32);transform-origin:-100% 50%;opacity:0;}
+  50% {transform: matrix(.1, 0, 0, .1, 22, 32);transform-origin:-100% 50%;opacity:0;}
+  100% {transform: matrix(1, 0, 0, 1, 0, 0); transform-origin:-100% 50%; opacity:1;}
+}
+@-webkit-keyframes turnOff {
+  0% {transform: matrix(1, 0, 0, 1, 0, 0);transform-origin:-100% 50%; opacity:1;}
+  50% {transform: matrix(.1, 0, 0, .1, 22, 32);transform-origin:-100% 50%;}
+  100% {transform: matrix(0, 0, 0, 0, 22, 32);transform-origin:-100% 50%;opacity:0;}
+}
+@keyframes turnOn {
+  0% {transform: matrix(0, 0, 0, 0, 22, 32);transform-origin:-100% 50%;opacity:0;}
+  50% {transform: matrix(.1, 0, 0, .1, 22, 32);transform-origin:-100% 50%;opacity:0;}
+  100% {transform: matrix(1, 0, 0, 1, 0, 0); transform-origin:-100% 50%; opacity:1;}
+}
+@keyframes turnOff {
+  0% {transform: matrix(1, 0, 0, 1, 0, 0);transform-origin:-100% 50%; opacity:1;}
+  50% {transform: matrix(.1, 0, 0, .1, 22, 32);transform-origin:-100% 50%;}
+  100% {transform: matrix(0, 0, 0, 0, 22, 32);transform-origin:-100% 50%;opacity:0;}
+}
+
+.video-close.open { position: absolute; z-index: 1000; opacity: 1;}
+.video-overlay-more.open{ display: flex; position:absolute; z-index: 1000; opacity: 1;  align-items: center;}
+.video-close { position: absolute; z-index: 1000; width: 24px; height: 24px; border-radius: 6px; background: rgba(124, 124, 124, 0.5);cursor: pointer; transition: all 200ms; opacity: 0;display: flex; align-items: center;justify-content: center;}
+.video-overlay-more{display: none;font-size: 14px; letter-spacing: -1px;text-decoration: none; cursor: pointer; color: #fff; position: absolute;right: 5px;bottom: 15px;}
+.play-closebtn{position: absolute; right: 50px;}
+
+/* progress bar */
+.bidrich_branding_play .figcaption {position: relative;width:100%;height: 5px;bottom:5px;}
+.bidrich_branding_play progress[value] {appearance: none;border: none;display: block; height: 5px;order: 1; position: relative; width: 100%; background-color: #63636365;}
+.bidrich_branding_play progress[value]::-webkit-progress-bar {background-color: #63636365;}
+.bidrich_branding_play progress[value]::-webkit-progress-value {background: linear-gradient(to right,#2B76E0 0,#3B58F7 51%,#402BE0 100%);
+}
+
+
+.bidrich_branding_play .play-btn {
+  width: 50px;height: 50px;
+  background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+  border-radius: 50%; position: absolute; z-index: 10; top: 50%; right:26%; transform: translateX(90%) translateY(-50%); box-sizing: content-box; display: block;
+  box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
+}
+
+/* triangle */
+.bidrich_branding_play .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  transform-origin: center center;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid #fff;
+  z-index: 100;
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* pulse wave */
+.bidrich_branding_play .play-btn:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, .75);
+  top: -33%;
+  left: -35%;
+  background: rgba(198, 16, 0, 0);
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);}
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;}
+  }
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);}
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;}
+}
+
+@media (min-width: 1024px){
+  .bidrich_branding_play {margin: 0 auto;}
+}

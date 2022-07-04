@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bidrich Branding Paly</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="bidrich_branding_play_wrap">
+  <div class="bidrich_branding_play">
+    <div class="play-box-video">
+      <video id="player" width="375" autoplay muted loop playsinline OnClick="window.open('https://egon.co.kr/#sevenPage')">
+        <source src="egon.mp4"type="video/mp4">
+      </video>
+      <div class="figcaption">
+        <label id="timer" for="progress"	role="timer">
+        </label>
+        <progress id="progress"	max="100"	value="0"></progress>
+      </div>
+      <!-- moreBTN -->
+      <a href="https://egon.co.kr/#sevenPage" target="_blank" class="video-overlay-more" style="color:#fff;position: absolute;">더 알아보기 
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+      </a>
+      <!-- volumeBTN -->
+      <svg id ="volume" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+        <g id="mute">
+          <g>
+            <path class="mute" d="M620.8,358.3l98.1,98.1l92.9-92.9c14.9-14.9,39-14.9,53.9,0l0,0c14.9,14.9,14.9,39,0,53.9l-92.9,92.9
+              l99.2,99.2c14.9,14.9,14.9,39,0,53.9l-2.3,2.3c-14.9,14.9-39,14.9-53.9,0l-99.2-99.2l-92.9,92.9c-14.9,14.9-39,14.9-53.9,0l0,0
+              c-14.9-14.9-14.9-39,0-53.9l92.9-92.9l-98.1-98.1c-14.9-14.9-14.9-39,0-53.9l2.3-2.3C581.8,343.4,605.9,343.4,620.8,358.3z"/>
+          </g>
+        </g>
+        <g id="speaker">
+          <path class="speaker" d="M464.2,197.9v628.2c0,20.2-16.7,37-37,37c-9.8,0-19.1-4-26-11L209,659.8H94.7c-20.2,0-37-16.7-37-37V401.1
+            c0-20.2,16.7-37,37-37H209l192.3-192.3c6.9-6.9,16.2-11,26-11C447.5,160.9,464.2,177.7,464.2,197.9z"/>
+        </g>
+        <g id="waves">
+          <path class="wave sm" transform="matrix(1,0,0,1,0,0)" d="M686,512c0,57.8-35.2,113.7-89.5,135.7c-4.6,2.3-9.8,2.9-14.4,2.9c-20.2,0-37-16.2-37-37
+            c0-43.9,67-31.7,67-101.6s-67-57.8-67-101.6c0-20.8,16.7-37,37-37c4.6,0,9.8,0.6,14.4,2.9C650.7,397.7,686,454.2,686,512z"/>
+          <path class="wave md" transform="matrix(1,0,0,1,0,0)" d="M833.8,512c0,117.2-70.4,226.3-179,271.9c-4.6,1.7-9.8,2.9-14.4,2.9c-20.8,0-37.5-16.7-37.5-37
+            c0-16.2,9.2-27.1,22.5-34.1c15.6-8.1,30-15,43.9-25.4c57.2-41.6,90.6-108,90.6-178.4s-33.5-136.8-90.6-178.4
+            c-13.9-10.4-28.3-17.3-43.9-25.4c-13.3-6.9-22.5-17.9-22.5-34.1c0-20.2,16.7-37,37-37c5.2,0,10.4,1.1,15,2.9
+            C763.3,285.6,833.7,394.8,833.8,512L833.8,512z"/>
+          <path class="wave lg" transform="matrix(1,0,0,1,0,0)" d="M981.6,512c0,177.3-105.6,337.8-268.5,407.6c-4.6,1.7-9.8,2.9-15,2.9c-20.2,0-37-16.7-37-37
+            c0-16.7,8.6-26,22.5-34.1c8.1-4.6,17.3-7.5,26-12.1c16.2-8.6,32.3-18.5,47.3-29.5C851.6,740,907.6,629.8,907.6,512
+            s-56-228.1-150.7-297.9c-15-11-31.2-20.8-47.3-29.5c-8.6-4.6-17.9-7.5-26-12.1c-13.9-8.1-22.5-17.3-22.5-34.1c0-20.2,16.7-37,37-37
+            c5.2,0,10.4,1.1,15,2.9C875.9,174.3,981.6,334.7,981.6,512z"/>
+        </g>
+      </svg>
+    </div>
+    <!-- Banner Img -->
+    <div class="play-box-img" OnClick="window.open('https://egon.co.kr/#sevenPage')"></div>
+    <div id="play-video" class="video-play-button">
+      <span></span>
+    </div>
+  </div>
+  <div class="play-closebtn">
+    <!-- closeBTN -->
+    <a class="video-close">
+      <img src="https://gougoi.com/preview/img/close.png" alt="">
+    </a>
+    <!-- infomark -->
+    <div id="BIDRICH_InfoMark_box" style="position: relative;">
+          <div id="BIDRICH_InfoMark" style="position: absolute;top:0;right: 0;margin: 4px;">
+                  <div style="width: 15px; height: 15px;">
+                      <img src="https://gougoi.contentcave.co.kr/icon/info-icon.png"  id="info_icon"style="position:absolute;width: 15px;height: 15px;right: 0;" onclick="infoOpen()"/>
+                      <img src="https://gougoi.contentcave.co.kr/icon/advertis-icon.png" id="advertis_icon" style="position: absolute; width: 117px; height: 15px;right:15px;display:none;" onclick="window.open('https://gougoi.com/contact.php')"/>    
+                  </div>
+          </div>
+    </div>
+  </div>
+</div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script  src="./script.js"></script>
+</body>
+</html>
